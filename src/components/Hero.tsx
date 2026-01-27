@@ -15,6 +15,32 @@ export default function Hero() {
 
             <div className="container relative mx-auto px-6 z-10 flex flex-col items-center text-center">
 
+                {/* Profile Photo Placeholder */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-8 relative"
+                >
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
+                    <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-white/5 border-4 border-white/10 shadow-2xl flex items-center justify-center overflow-hidden">
+                        <img
+                            src="/profile.png"
+                            alt="Brian Kiragu Kinyua"
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                                // Fallback if image fails to load
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.parentElement?.classList.add('bg-zinc-800');
+                            }}
+                        />
+                        {/* This fallback icon shows if img is hidden or loading */}
+                        <div className="absolute inset-0 flex items-center justify-center -z-10">
+                            <Shield className="w-12 h-12 text-white/20" />
+                        </div>
+                    </div>
+                </motion.div>
+
                 {/* Badge */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

@@ -12,6 +12,7 @@ const projects = [
         color: "text-green-400",
         border: "border-green-400/20",
         bg: "bg-green-400/10",
+        github: "https://github.com/bryank-4/farmconnect",
     },
     {
         title: "Network Defense Labs",
@@ -21,6 +22,7 @@ const projects = [
         color: "text-blue-400",
         border: "border-blue-400/20",
         bg: "bg-blue-400/10",
+        github: null,
     },
     {
         title: "School Portal System",
@@ -30,6 +32,7 @@ const projects = [
         color: "text-yellow-400",
         border: "border-yellow-400/20",
         bg: "bg-yellow-400/10",
+        github: "https://github.com/Sam-Nyalik/school-portal-system",
     },
     {
         title: "Desktop Weather App",
@@ -39,6 +42,7 @@ const projects = [
         color: "text-purple-400",
         border: "border-purple-400/20",
         bg: "bg-purple-400/10",
+        github: "https://github.com/bryank-4/desktop-weather-app",
     },
 ];
 
@@ -73,11 +77,22 @@ export default function Projects() {
                                     <div className={`p-3 rounded-lg ${project.bg} ${project.color}`}>
                                         <project.icon className="w-6 h-6" />
                                     </div>
-                                    <div className="flex gap-3">
-                                        <button className="p-2 text-gray-400 hover:text-white transition-colors">
-                                            <Github className="w-5 h-5" />
-                                        </button>
-                                        <button className="p-2 text-gray-400 hover:text-white transition-colors">
+                                    <div className="flex gap-3 z-20">
+                                        {project.github ? (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="p-2 text-gray-400 hover:text-white transition-colors cursor-pointer"
+                                            >
+                                                <Github className="w-5 h-5" />
+                                            </a>
+                                        ) : (
+                                            <div className="p-2 text-gray-600 cursor-not-allowed">
+                                                <Github className="w-5 h-5" />
+                                            </div>
+                                        )}
+                                        <button className="p-2 text-gray-400 hover:text-white transition-colors cursor-not-allowed opacity-50">
                                             <ExternalLink className="w-5 h-5" />
                                         </button>
                                     </div>
