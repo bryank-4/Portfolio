@@ -5,6 +5,13 @@ import { Calendar, Briefcase, GraduationCap } from "lucide-react";
 
 const education = [
     {
+        title: "Cisco Ethical Hacker (Pass)",
+        institution: "Cyber Shujaa Program (Cohort IV)",
+        period: "Issued: Apr 2026",
+        description: "Joint program by USIU-Africa, Serianu Ltd, and Kenya Bankers Association. Sponsored by Challenge Fund for Youth Employment. Cert No: CS2025-OZ2604270920476333.",
+        icon: ShieldIcon,
+    },
+    {
         title: "Bachelor of Science in Computer Science",
         institution: "The Catholic University of Eastern Africa (CUEA)",
         period: "Graduated: Oct 2025",

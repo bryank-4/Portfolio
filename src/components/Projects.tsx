@@ -13,16 +13,18 @@ const projects = [
         border: "border-green-400/20",
         bg: "bg-green-400/10",
         github: "https://github.com/bryank-4/farmconnect",
+        external: null,
     },
     {
-        title: "Network Defense Labs",
-        description: "Conducted packet analysis and vulnerability scanning (Wireshark) to understand traffic flow. Simulated attacks to learn defensive strategies.",
-        tech: ["Wireshark", "Packet Analysis", "Network Security", "Cisco"],
+        title: "OWASP Top 10 2025: Insecure Data Handling",
+        description: "Completed TryHackMe security training room focused on identifying and mitigating vulnerabilities under OWASP Top 10 (2025): A04: Cryptographic Failures, A05: Injection, and A08: Software or Data Integrity Failures.",
+        tech: ["TryHackMe", "OWASP Top 10", "Insecure Data Handling", "Web Security"],
         icon: Shield,
         color: "text-blue-400",
         border: "border-blue-400/20",
         bg: "bg-blue-400/10",
         github: null,
+        external: "https://tryhackme.com/room/owasptopten2025three",
     },
     {
         title: "School Portal System",
@@ -33,6 +35,7 @@ const projects = [
         border: "border-yellow-400/20",
         bg: "bg-yellow-400/10",
         github: "https://github.com/Sam-Nyalik/school-portal-system",
+        external: null,
     },
     {
         title: "Desktop Weather App",
@@ -43,6 +46,7 @@ const projects = [
         border: "border-purple-400/20",
         bg: "bg-purple-400/10",
         github: "https://github.com/bryank-4/desktop-weather-app",
+        external: null,
     },
 ];
 
@@ -92,9 +96,20 @@ export default function Projects() {
                                                 <Github className="w-5 h-5" />
                                             </div>
                                         )}
-                                        <button className="p-2 text-gray-400 hover:text-white transition-colors cursor-not-allowed opacity-50">
-                                            <ExternalLink className="w-5 h-5" />
-                                        </button>
+                                        {project.external ? (
+                                            <a
+                                                href={project.external}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="p-2 text-gray-400 hover:text-white transition-colors cursor-pointer"
+                                            >
+                                                <ExternalLink className="w-5 h-5" />
+                                            </a>
+                                        ) : (
+                                            <button className="p-2 text-gray-400 hover:text-white transition-colors cursor-not-allowed opacity-50">
+                                                <ExternalLink className="w-5 h-5" />
+                                            </button>
+                                        )}
                                     </div>
                                 </div>
 
