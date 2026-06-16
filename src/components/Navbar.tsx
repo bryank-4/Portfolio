@@ -41,7 +41,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <a
-                        href="/resume.pdf"
+                        href="/Brian-Kinyua-Resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-4 py-2 text-xs font-mono font-bold bg-primary/10 text-primary border border-primary/20 rounded hover:bg-primary/20 transition-colors uppercase tracking-wider block text-center"
@@ -80,7 +80,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <a
-                                href="/resume.pdf"
+                                href="/Brian-Kinyua-Resume.pdf"
                                 download
                                 className="w-full text-center px-4 py-3 text-sm font-mono font-bold bg-primary text-black rounded hover:bg-primary/90 transition-colors uppercase block"
                             >
